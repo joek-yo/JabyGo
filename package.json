@@ -10,14 +10,25 @@
     "dev": "concurrently \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.44.1",
     "@typescript-eslint/parser": "^8.44.1",
     "concurrently": "^8.2.2",
-    "eslint": "^8.57.0",
+    "eslint": "^9.36.0",
     "husky": "^9.1.7",
+    "lint-staged": "^16.2.1",
     "prettier": "^3.2.5"
+  },
+  "lint-staged": {
+    "backend/src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "frontend/src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
