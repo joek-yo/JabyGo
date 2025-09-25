@@ -5,3 +5,13 @@ JabyGo is a B2B marketplace platform where **suppliers** and **buyers** connect,
 This repository contains both **frontend** and **backend** in a single monorepo.
 
 ## 📂 Project Structure
+
+## 🛠️ Root Scripts
+- `npm run install:all` → Install dependencies in both frontend & backend.
+- `npm run dev` → Run frontend & backend concurrently.
+- `npm run lint` → Run ESLint across the project.
+- `npm run format` → Format code with Prettier.
+
+## 🧹 Git Hooks
+We use Husky to enforce code quality:
+- Pre-commit hook runs `npm run lint`.
