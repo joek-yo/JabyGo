@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint
-
+echo "🔍 Running lint-staged on staged files..."
+npx lint-staged
